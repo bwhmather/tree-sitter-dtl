@@ -1,0 +1,36 @@
+{
+  "name": "tree-sitter-dtl",
+  "version": "0.0.1",
+  "description": "DTL grammar for tree-sitter",
+  "main": "bindings/node",
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp build",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse",
+    "test-wndows": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwhmather/tree-sitter-dtl.git"
+  },
+  "author": "Ben Mather <bwhmather@bwhmather.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bwhmather/tree-sitter-dtl/issues"
+  },
+  "homepage": "https://github.com/bwhmather/tree-sitter-dtl#readme",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.1"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.dtl",
+      "file-types": [
+        "dtl"
+      ]
+    }
+  ]
+}

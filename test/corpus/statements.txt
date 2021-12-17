@@ -1,0 +1,26 @@
+=====================================
+Binding from simple SELECT
+=====================================
+
+WITH table AS SELECT * FROM other;
+
+---
+
+(script
+  (with_statement
+    (table_identifier)
+    (select_expression
+      (table_identifier))))
+
+=====================================
+Simple EXPORT
+=====================================
+
+EXPORT table_name TO 'table';
+
+---
+
+(script
+  (export_statement
+    (table_identifier)
+    (string_literal)))
